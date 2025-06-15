@@ -7,6 +7,7 @@ import helmet from 'helmet';
 import rateLimit from 'express-rate-limit';
 import plaidRoutes from './routes/plaidRoutes';
 import logger from './utils/logger';
+import path from 'path'; 
 import swaggerUi from 'swagger-ui-express';
 import swaggerSpec from './config/swagger';
 
@@ -66,6 +67,12 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec, {
     tryItOutEnabled: true
   }
 }));
+
+app.use('/test', express.static('public'));
+
+app.get('/test', (req, res) => {
+  res.sendFile(path.join(__dirname, '../public/test.html'));
+});
 
 // Swagger JSON endpoint
 app.get('/api-docs.json', (req, res) => {

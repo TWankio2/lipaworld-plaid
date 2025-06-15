@@ -1,5 +1,9 @@
 #  Plaid Microservice API Documentation
 
+Test Interface: http://localhost:3000/test
+Swagger UI: http://localhost:3000/api-docs
+Health Check: http://localhost:3000/health
+
 ##  Authentication
 
 All endpoints (except `/webhook` and `/health`) require authentication using either:
@@ -18,7 +22,7 @@ Creates a temporary token to initialize Plaid Link on the frontend.
 ```json
 {
   "user_id": "user123",
-  "client_name": "Boomlet App",
+  "client_name": "LipaWorld App",
   "country_codes": ["US"],
   "language": "en",
   "products": ["transactions", "identity"]

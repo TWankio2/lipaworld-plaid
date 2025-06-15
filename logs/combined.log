@@ -48,3 +48,86 @@
 {"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"plaid-microservice","timestamp":"2025-06-15T12:17:36.370Z","url":"/api-docs/swagger-ui-init.js","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"}
 {"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"plaid-microservice","timestamp":"2025-06-15T12:17:36.770Z","url":"/api-docs/favicon-32x32.png","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"}
 {"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"plaid-microservice","timestamp":"2025-06-15T12:17:37.483Z","url":"/api-docs/favicon-32x32.png","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"}
+{"level":"info","message":"🚀 Plaid microservice running on port 3000","service":"plaid-microservice","timestamp":"2025-06-15T15:34:23.344Z"}
+{"level":"info","message":"Environment: development","service":"plaid-microservice","timestamp":"2025-06-15T15:34:23.347Z"}
+{"level":"info","message":"Plaid environment: sandbox","service":"plaid-microservice","timestamp":"2025-06-15T15:34:23.347Z"}
+{"level":"info","message":"🚀 Plaid microservice running on port 3000","service":"plaid-microservice","timestamp":"2025-06-15T15:34:45.481Z"}
+{"level":"info","message":"Environment: development","service":"plaid-microservice","timestamp":"2025-06-15T15:34:45.484Z"}
+{"level":"info","message":"Plaid environment: sandbox","service":"plaid-microservice","timestamp":"2025-06-15T15:34:45.484Z"}
+{"level":"info","message":"🚀 Plaid microservice running on port 3000","service":"plaid-microservice","timestamp":"2025-06-15T15:34:57.749Z"}
+{"level":"info","message":"Environment: development","service":"plaid-microservice","timestamp":"2025-06-15T15:34:57.752Z"}
+{"level":"info","message":"Plaid environment: sandbox","service":"plaid-microservice","timestamp":"2025-06-15T15:34:57.752Z"}
+{"level":"info","message":"🚀 Plaid microservice running on port 3000","service":"plaid-microservice","timestamp":"2025-06-15T15:34:59.648Z"}
+{"level":"info","message":"Environment: development","service":"plaid-microservice","timestamp":"2025-06-15T15:34:59.651Z"}
+{"level":"info","message":"Plaid environment: sandbox","service":"plaid-microservice","timestamp":"2025-06-15T15:34:59.651Z"}
+{"level":"info","message":"🚀 Plaid microservice running on port 3000","service":"plaid-microservice","timestamp":"2025-06-15T15:35:07.281Z"}
+{"level":"info","message":"Environment: development","service":"plaid-microservice","timestamp":"2025-06-15T15:35:07.284Z"}
+{"level":"info","message":"Plaid environment: sandbox","service":"plaid-microservice","timestamp":"2025-06-15T15:35:07.284Z"}
+{"level":"info","message":"🚀 Plaid microservice running on port 3000","service":"plaid-microservice","timestamp":"2025-06-15T15:35:08.582Z"}
+{"level":"info","message":"Environment: development","service":"plaid-microservice","timestamp":"2025-06-15T15:35:08.585Z"}
+{"level":"info","message":"Plaid environment: sandbox","service":"plaid-microservice","timestamp":"2025-06-15T15:35:08.585Z"}
+{"level":"info","message":"🚀 Plaid microservice running on port 3000","service":"plaid-microservice","timestamp":"2025-06-15T15:39:07.591Z"}
+{"level":"info","message":"Environment: development","service":"plaid-microservice","timestamp":"2025-06-15T15:39:07.594Z"}
+{"level":"info","message":"Plaid environment: sandbox","service":"plaid-microservice","timestamp":"2025-06-15T15:39:07.594Z"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"plaid-microservice","timestamp":"2025-06-15T15:39:19.145Z","url":"/api-docs/","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"plaid-microservice","timestamp":"2025-06-15T15:39:19.198Z","url":"/api-docs/swagger-ui.css","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"plaid-microservice","timestamp":"2025-06-15T15:39:19.201Z","url":"/api-docs/swagger-ui-bundle.js","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"plaid-microservice","timestamp":"2025-06-15T15:39:19.207Z","url":"/api-docs/swagger-ui-standalone-preset.js","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"plaid-microservice","timestamp":"2025-06-15T15:39:19.212Z","url":"/api-docs/swagger-ui-init.js","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"plaid-microservice","timestamp":"2025-06-15T15:39:19.642Z","url":"/api-docs/favicon-32x32.png","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"plaid-microservice","timestamp":"2025-06-15T15:39:20.957Z","url":"/api-docs/favicon-32x32.png","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"POST","service":"plaid-microservice","timestamp":"2025-06-15T15:39:36.529Z","url":"/link-token","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"}
+{"client_name":"LipaWorld App","level":"info","link_token_id":"link-sandbox...","message":"Link token created successfully","service":"plaid-microservice","timestamp":"2025-06-15T15:39:38.421Z","user_id":"user_12345"}
+{"level":"info","message":"🚀 Plaid microservice running on port 3000","service":"plaid-microservice","timestamp":"2025-06-15T15:41:09.935Z"}
+{"level":"info","message":"Environment: development","service":"plaid-microservice","timestamp":"2025-06-15T15:41:09.940Z"}
+{"level":"info","message":"Plaid environment: sandbox","service":"plaid-microservice","timestamp":"2025-06-15T15:41:09.941Z"}
+{"level":"info","message":"🚀 Plaid microservice running on port 3000","service":"plaid-microservice","timestamp":"2025-06-15T15:41:11.591Z"}
+{"level":"info","message":"Environment: development","service":"plaid-microservice","timestamp":"2025-06-15T15:41:11.594Z"}
+{"level":"info","message":"Plaid environment: sandbox","service":"plaid-microservice","timestamp":"2025-06-15T15:41:11.595Z"}
+{"level":"info","message":"🚀 Plaid microservice running on port 3000","service":"plaid-microservice","timestamp":"2025-06-15T15:41:12.780Z"}
+{"level":"info","message":"Environment: development","service":"plaid-microservice","timestamp":"2025-06-15T15:41:12.783Z"}
+{"level":"info","message":"Plaid environment: sandbox","service":"plaid-microservice","timestamp":"2025-06-15T15:41:12.784Z"}
+{"level":"info","message":"🚀 Plaid microservice running on port 3000","service":"plaid-microservice","timestamp":"2025-06-15T15:41:14.597Z"}
+{"level":"info","message":"Environment: development","service":"plaid-microservice","timestamp":"2025-06-15T15:41:14.603Z"}
+{"level":"info","message":"Plaid environment: sandbox","service":"plaid-microservice","timestamp":"2025-06-15T15:41:14.604Z"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"POST","service":"plaid-microservice","timestamp":"2025-06-15T15:42:11.819Z","url":"/link-token","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"}
+{"client_name":"Boomlet App","level":"info","link_token_id":"link-sandbox...","message":"Link token created successfully","service":"plaid-microservice","timestamp":"2025-06-15T15:42:13.777Z","user_id":"user_12345"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"plaid-microservice","timestamp":"2025-06-15T15:42:51.603Z","url":"/health","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"}
+{"level":"info","message":"🚀 Plaid microservice running on port 3000","service":"plaid-microservice","timestamp":"2025-06-15T15:50:29.212Z"}
+{"level":"info","message":"Environment: development","service":"plaid-microservice","timestamp":"2025-06-15T15:50:29.221Z"}
+{"level":"info","message":"Plaid environment: sandbox","service":"plaid-microservice","timestamp":"2025-06-15T15:50:29.221Z"}
+{"level":"info","message":"🚀 Plaid microservice running on port 3000","service":"plaid-microservice","timestamp":"2025-06-15T15:50:30.556Z"}
+{"level":"info","message":"Environment: development","service":"plaid-microservice","timestamp":"2025-06-15T15:50:30.559Z"}
+{"level":"info","message":"Plaid environment: sandbox","service":"plaid-microservice","timestamp":"2025-06-15T15:50:30.559Z"}
+{"level":"info","message":"🚀 Plaid microservice running on port 3000","service":"plaid-microservice","timestamp":"2025-06-15T15:50:34.802Z"}
+{"level":"info","message":"Environment: development","service":"plaid-microservice","timestamp":"2025-06-15T15:50:34.807Z"}
+{"level":"info","message":"Plaid environment: sandbox","service":"plaid-microservice","timestamp":"2025-06-15T15:50:34.807Z"}
+{"level":"info","message":"🚀 Plaid microservice running on port 3000","service":"plaid-microservice","timestamp":"2025-06-15T15:52:51.613Z"}
+{"level":"info","message":"Environment: development","service":"plaid-microservice","timestamp":"2025-06-15T15:52:51.615Z"}
+{"level":"info","message":"Plaid environment: sandbox","service":"plaid-microservice","timestamp":"2025-06-15T15:52:51.616Z"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"plaid-microservice","timestamp":"2025-06-15T15:53:08.017Z","url":"/test","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"}
+{"error":"ENOENT: no such file or directory, stat 'C:\\Users\\VICTUS\\Documents\\WebApps\\lipaworld-plaid\\public\\test.html'","level":"error","message":"Unhandled error","service":"plaid-microservice","stack":"Error: ENOENT: no such file or directory, stat 'C:\\Users\\VICTUS\\Documents\\WebApps\\lipaworld-plaid\\public\\test.html'","timestamp":"2025-06-15T15:53:08.031Z"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"plaid-microservice","timestamp":"2025-06-15T15:53:15.996Z","url":"/.well-known/appspecific/com.chrome.devtools.json","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"plaid-microservice","timestamp":"2025-06-15T16:13:01.557Z","url":"/test","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"}
+{"error":"ENOENT: no such file or directory, stat 'C:\\Users\\VICTUS\\Documents\\WebApps\\lipaworld-plaid\\public\\test.html'","level":"error","message":"Unhandled error","service":"plaid-microservice","stack":"Error: ENOENT: no such file or directory, stat 'C:\\Users\\VICTUS\\Documents\\WebApps\\lipaworld-plaid\\public\\test.html'","timestamp":"2025-06-15T16:13:01.559Z"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"plaid-microservice","timestamp":"2025-06-15T16:13:01.672Z","url":"/.well-known/appspecific/com.chrome.devtools.json","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"plaid-microservice","timestamp":"2025-06-15T16:13:27.873Z","url":"/test","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"}
+{"error":"ENOENT: no such file or directory, stat 'C:\\Users\\VICTUS\\Documents\\WebApps\\lipaworld-plaid\\public\\test.html'","level":"error","message":"Unhandled error","service":"plaid-microservice","stack":"Error: ENOENT: no such file or directory, stat 'C:\\Users\\VICTUS\\Documents\\WebApps\\lipaworld-plaid\\public\\test.html'","timestamp":"2025-06-15T16:13:27.875Z"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"plaid-microservice","timestamp":"2025-06-15T16:13:27.930Z","url":"/.well-known/appspecific/com.chrome.devtools.json","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"}
+{"level":"info","message":"SIGINT received, shutting down gracefully","service":"plaid-microservice","timestamp":"2025-06-15T16:13:38.487Z"}
+{"level":"info","message":"🚀 Plaid microservice running on port 3000","service":"plaid-microservice","timestamp":"2025-06-15T16:13:44.377Z"}
+{"level":"info","message":"Environment: development","service":"plaid-microservice","timestamp":"2025-06-15T16:13:44.379Z"}
+{"level":"info","message":"Plaid environment: sandbox","service":"plaid-microservice","timestamp":"2025-06-15T16:13:44.380Z"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"plaid-microservice","timestamp":"2025-06-15T16:13:50.212Z","url":"/test","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"}
+{"error":"ENOENT: no such file or directory, stat 'C:\\Users\\VICTUS\\Documents\\WebApps\\lipaworld-plaid\\public\\test.html'","level":"error","message":"Unhandled error","service":"plaid-microservice","stack":"Error: ENOENT: no such file or directory, stat 'C:\\Users\\VICTUS\\Documents\\WebApps\\lipaworld-plaid\\public\\test.html'","timestamp":"2025-06-15T16:13:50.216Z"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"plaid-microservice","timestamp":"2025-06-15T16:13:50.289Z","url":"/.well-known/appspecific/com.chrome.devtools.json","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"plaid-microservice","timestamp":"2025-06-15T16:14:24.099Z","url":"/health","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"plaid-microservice","timestamp":"2025-06-15T16:14:29.231Z","url":"/.well-known/appspecific/com.chrome.devtools.json","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"plaid-microservice","timestamp":"2025-06-15T16:15:07.158Z","url":"/test/test.html","userAgent":"curl/8.13.0"}
+{"level":"info","message":"SIGINT received, shutting down gracefully","service":"plaid-microservice","timestamp":"2025-06-15T16:31:01.561Z"}
+{"level":"info","message":"🚀 Plaid microservice running on port 3000","service":"plaid-microservice","timestamp":"2025-06-15T16:32:31.242Z"}
+{"level":"info","message":"Environment: development","service":"plaid-microservice","timestamp":"2025-06-15T16:32:31.245Z"}
+{"level":"info","message":"Plaid environment: sandbox","service":"plaid-microservice","timestamp":"2025-06-15T16:32:31.245Z"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"plaid-microservice","timestamp":"2025-06-15T16:32:45.084Z","url":"/test/test.html","userAgent":"curl/8.13.0"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"plaid-microservice","timestamp":"2025-06-15T16:32:59.785Z","url":"/test","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"plaid-microservice","timestamp":"2025-06-15T16:32:59.797Z","url":"/test/","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"}

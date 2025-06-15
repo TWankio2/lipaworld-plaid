@@ -6,7 +6,100 @@ import {
   exchangeTokenValidation,
   accessTokenValidation,
   transactionsValidation
-} from '../middleware/validation';
+} from '../middleware/validation'
+
+/**
+ * @swagger
+ * /link-token:
+ *   post:
+ *     tags: [Link Flow]
+ *     summary: Create Link Token
+ *     description: Creates a temporary token to initialize Plaid Link on the frontend
+ *     security:
+ *       - ApiKeyAuth: []
+ *       - BearerAuth: []
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/LinkTokenRequest'
+ *     responses:
+ *       200:
+ *         description: Link token created successfully
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/LinkTokenResponse'
+ *       400:
+ *         description: Validation error
+ *       401:
+ *         description: Authentication failed
+ *       500:
+ *         description: Internal server error
+ */
+
+/**
+ * @swagger
+ * /exchange-token:
+ *   post:
+ *     tags: [Link Flow]
+ *     summary: Exchange Public Token
+ *     description: Exchanges temporary public token for permanent access token
+ *     security:
+ *       - ApiKeyAuth: []
+ *       - BearerAuth: []
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/ExchangeTokenRequest'
+ *     responses:
+ *       200:
+ *         description: Token exchanged successfully
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/ExchangeTokenResponse'
+ */
+
+/**
+ * @swagger
+ * /accounts:
+ *   post:
+ *     tags: [Data Retrieval]
+ *     summary: Get Accounts
+ *     description: Retrieves all linked bank accounts and their metadata
+ *     security:
+ *       - ApiKeyAuth: []
+ *       - BearerAuth: []
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/AccessTokenRequest'
+ *     responses:
+ *       200:
+ *         description: Accounts retrieved successfully
+ */
+
+/**
+ * @swagger
+ * /health:
+ *   get:
+ *     tags: [Health & Monitoring]
+ *     summary: Health Check
+ *     description: Checks service health and Plaid API connectivity
+ *     responses:
+ *       200:
+ *         description: Service is healthy
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/HealthResponse'
+ */
 
 const router = Router();
 
@@ -23,7 +116,7 @@ router.post('/item/remove', authenticate, accessTokenValidation, plaidController
 router.post('/accounts/balance', authenticate, accessTokenValidation, plaidController.getAccountsBalance);
 router.post('/link-token/update', authenticate, exchangeTokenValidation, plaidController.createUpdateLinkToken);
 
-// Webhook endpoint (public, but should be secured with webhook signature in production)
+// Webhook endpoint (public, temporarily)
 router.post('/webhook', plaidController.handleWebhook);
 
 // Health check (public)

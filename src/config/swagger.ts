@@ -133,7 +133,7 @@ Authorization: Bearer your-jwt-token-here
           client_name: {
             type: 'string',
             description: 'Name of your application (shown to users)',
-            example: 'Boomlet App',
+            example: 'LipaWorld App',
             maxLength: 30
           },
           country_codes: {
