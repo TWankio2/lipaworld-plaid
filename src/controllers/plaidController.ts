@@ -92,10 +92,19 @@ class PlaidController {
 
   async handleWebhook(req: Request, res: Response) {
     try {
-      const result = await plaidService.handleWebhook(req.body);
+      const result = await plaidService.handleWebhook(req.body, req.headers);
       res.json(result);
     } catch (error: any) {
       logger.error('Webhook processing failed', { error: error.message });
+      
+   
+      if (error.message === 'Invalid webhook signature') {
+        return res.status(401).json({ 
+          error: 'Unauthorized webhook',
+          details: 'Webhook signature verification failed' 
+        });
+      }
+      
       res.status(500).json({ 
         error: 'Failed to process webhook',
         details: error.message 
@@ -103,14 +112,97 @@ class PlaidController {
     }
   }
 
-  async healthCheck(req: Request, res: Response) {
+
+
+async getTransactionsSync(req: AuthRequest, res: Response) {
+  try {
+    const { access_token, cursor } = req.body;
+    const result = await plaidService.getTransactionsSync(access_token, cursor);
+    res.json(result);
+  } catch (error: any) {
+    logger.error('Transactions sync failed', { error: error.message });
+    res.status(500).json({ 
+      error: 'Failed to sync transactions',
+      details: error.response?.data || error.message 
+    });
+  }
+}
+
+async getItem(req: AuthRequest, res: Response) {
+  try {
+    const { access_token } = req.body;
+    const result = await plaidService.getItem(access_token);
+    res.json(result);
+  } catch (error: any) {
+    logger.error('Get item failed', { error: error.message });
+    res.status(500).json({ 
+      error: 'Failed to get item',
+      details: error.response?.data || error.message 
+    });
+  }
+}
+
+async removeItem(req: AuthRequest, res: Response) {
+  try {
+    const { access_token } = req.body;
+    const result = await plaidService.removeItem(access_token);
+    res.json(result);
+  } catch (error: any) {
+    logger.error('Remove item failed', { error: error.message });
+    res.status(500).json({ 
+      error: 'Failed to remove item',
+      details: error.response?.data || error.message 
+    });
+  }
+}
+
+async getAccountsBalance(req: AuthRequest, res: Response) {
+  try {
+    const { access_token } = req.body;
+    const result = await plaidService.getAccountsBalance(access_token);
+    res.json(result);
+  } catch (error: any) {
+    logger.error('Get account balances failed', { error: error.message });
+    res.status(500).json({ 
+      error: 'Failed to get account balances',
+      details: error.response?.data || error.message 
+    });
+  }
+}
+
+async createUpdateLinkToken(req: AuthRequest, res: Response) {
+  try {
+    const { access_token, user_id } = req.body;
+    const result = await plaidService.createUpdateLinkToken(access_token, user_id);
+    res.json(result);
+  } catch (error: any) {
+    logger.error('Create update link token failed', { error: error.message });
+    res.status(500).json({ 
+      error: 'Failed to create update link token',
+      details: error.response?.data || error.message 
+    });
+  }
+}
+
+// Update the healthCheck to use the service's health check
+async healthCheck(req: Request, res: Response) {
+  try {
+    const result = await plaidService.healthCheck();
     res.json({
-      status: 'healthy',
+      ...result,
       timestamp: new Date().toISOString(),
       service: 'lipaworld-plaid-service',
       version: '1.0.0'
     });
+  } catch (error: any) {
+    logger.error('Health check failed', { error: error.message });
+    res.status(503).json({
+      status: 'unhealthy',
+      timestamp: new Date().toISOString(),
+      error: error.message
+    });
   }
+}
 }
 
 export default new PlaidController();

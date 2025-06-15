@@ -1,12 +1,16 @@
+import dotenv from 'dotenv';
+dotenv.config();
+
 import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
 import rateLimit from 'express-rate-limit';
-import dotenv from 'dotenv';
 import plaidRoutes from './routes/plaidRoutes';
 import logger from './utils/logger';
+import swaggerUi from 'swagger-ui-express';
+import swaggerSpec from './config/swagger';
 
-dotenv.config();
+
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -44,8 +48,33 @@ app.use((req, res, next) => {
 });
 
 // Routes
+
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec, {
+  explorer: true,
+  customCss: `
+    .swagger-ui .topbar { display: none }
+    .swagger-ui .info { margin: 20px 0 }
+    .swagger-ui .scheme-container { background: #1f2937; padding: 20px; border-radius: 8px; margin: 20px 0; }
+  `,
+  customSiteTitle: 'Lipaworld Plaid API',
+  swaggerOptions: {
+    persistAuthorization: true,
+    displayRequestDuration: true,
+    docExpansion: 'list',
+    filter: true,
+    showExtensions: true,
+    tryItOutEnabled: true
+  }
+}));
+
+// Swagger JSON endpoint
+app.get('/api-docs.json', (req, res) => {
+  res.setHeader('Content-Type', 'application/json');
+  res.send(swaggerSpec);
+});
+
 app.use('/plaid', plaidRoutes);
-app.use('/', plaidRoutes); // Also serve routes at root level
+app.use('/', plaidRoutes); 
 
 // 404 handler
 app.use('*', (req, res) => {

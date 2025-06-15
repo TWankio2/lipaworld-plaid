@@ -1,0 +1,50 @@
+{"level":"info","message":"🚀 Plaid microservice running on port 3000","service":"plaid-microservice","timestamp":"2025-06-15T12:10:39.151Z"}
+{"level":"info","message":"Environment: development","service":"plaid-microservice","timestamp":"2025-06-15T12:10:39.154Z"}
+{"level":"info","message":"Plaid environment: sandbox","service":"plaid-microservice","timestamp":"2025-06-15T12:10:39.154Z"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"plaid-microservice","timestamp":"2025-06-15T12:10:49.695Z","url":"/api-docs","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"plaid-microservice","timestamp":"2025-06-15T12:10:52.605Z","url":"/favicon.ico","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"}
+{"level":"info","message":"🚀 Plaid microservice running on port 3000","service":"plaid-microservice","timestamp":"2025-06-15T12:14:57.182Z"}
+{"level":"info","message":"Environment: development","service":"plaid-microservice","timestamp":"2025-06-15T12:14:57.185Z"}
+{"level":"info","message":"Plaid environment: sandbox","service":"plaid-microservice","timestamp":"2025-06-15T12:14:57.185Z"}
+{"level":"info","message":"🚀 Plaid microservice running on port 3000","service":"plaid-microservice","timestamp":"2025-06-15T12:14:58.374Z"}
+{"level":"info","message":"Environment: development","service":"plaid-microservice","timestamp":"2025-06-15T12:14:58.377Z"}
+{"level":"info","message":"Plaid environment: sandbox","service":"plaid-microservice","timestamp":"2025-06-15T12:14:58.377Z"}
+{"level":"info","message":"🚀 Plaid microservice running on port 3000","service":"plaid-microservice","timestamp":"2025-06-15T12:15:43.452Z"}
+{"level":"info","message":"Environment: development","service":"plaid-microservice","timestamp":"2025-06-15T12:15:43.454Z"}
+{"level":"info","message":"Plaid environment: sandbox","service":"plaid-microservice","timestamp":"2025-06-15T12:15:43.455Z"}
+{"level":"info","message":"🚀 Plaid microservice running on port 3000","service":"plaid-microservice","timestamp":"2025-06-15T12:16:21.661Z"}
+{"level":"info","message":"Environment: development","service":"plaid-microservice","timestamp":"2025-06-15T12:16:21.665Z"}
+{"level":"info","message":"Plaid environment: sandbox","service":"plaid-microservice","timestamp":"2025-06-15T12:16:21.665Z"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"plaid-microservice","timestamp":"2025-06-15T12:16:26.890Z","url":"/api-docs","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"plaid-microservice","timestamp":"2025-06-15T12:16:26.901Z","url":"/api-docs/","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"plaid-microservice","timestamp":"2025-06-15T12:16:27.006Z","url":"/api-docs/swagger-ui.css","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"plaid-microservice","timestamp":"2025-06-15T12:16:27.010Z","url":"/api-docs/swagger-ui-bundle.js","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"plaid-microservice","timestamp":"2025-06-15T12:16:27.022Z","url":"/api-docs/swagger-ui-standalone-preset.js","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"plaid-microservice","timestamp":"2025-06-15T12:16:27.029Z","url":"/api-docs/swagger-ui-init.js","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"plaid-microservice","timestamp":"2025-06-15T12:16:27.569Z","url":"/api-docs/favicon-32x32.png","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"plaid-microservice","timestamp":"2025-06-15T12:16:28.877Z","url":"/api-docs/favicon-32x32.png","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"}
+{"level":"info","message":"🚀 Plaid microservice running on port 3000","service":"plaid-microservice","timestamp":"2025-06-15T12:16:51.671Z"}
+{"level":"info","message":"Environment: development","service":"plaid-microservice","timestamp":"2025-06-15T12:16:51.675Z"}
+{"level":"info","message":"Plaid environment: sandbox","service":"plaid-microservice","timestamp":"2025-06-15T12:16:51.675Z"}
+{"level":"info","message":"🚀 Plaid microservice running on port 3000","service":"plaid-microservice","timestamp":"2025-06-15T12:16:54.826Z"}
+{"level":"info","message":"Environment: development","service":"plaid-microservice","timestamp":"2025-06-15T12:16:54.829Z"}
+{"level":"info","message":"Plaid environment: sandbox","service":"plaid-microservice","timestamp":"2025-06-15T12:16:54.829Z"}
+{"level":"info","message":"🚀 Plaid microservice running on port 3000","service":"plaid-microservice","timestamp":"2025-06-15T12:17:03.287Z"}
+{"level":"info","message":"Environment: development","service":"plaid-microservice","timestamp":"2025-06-15T12:17:03.292Z"}
+{"level":"info","message":"Plaid environment: sandbox","service":"plaid-microservice","timestamp":"2025-06-15T12:17:03.293Z"}
+{"level":"info","message":"🚀 Plaid microservice running on port 3000","service":"plaid-microservice","timestamp":"2025-06-15T12:17:08.728Z"}
+{"level":"info","message":"Environment: development","service":"plaid-microservice","timestamp":"2025-06-15T12:17:08.732Z"}
+{"level":"info","message":"Plaid environment: sandbox","service":"plaid-microservice","timestamp":"2025-06-15T12:17:08.732Z"}
+{"level":"info","message":"🚀 Plaid microservice running on port 3000","service":"plaid-microservice","timestamp":"2025-06-15T12:17:12.228Z"}
+{"level":"info","message":"Environment: development","service":"plaid-microservice","timestamp":"2025-06-15T12:17:12.232Z"}
+{"level":"info","message":"Plaid environment: sandbox","service":"plaid-microservice","timestamp":"2025-06-15T12:17:12.232Z"}
+{"level":"info","message":"🚀 Plaid microservice running on port 3000","service":"plaid-microservice","timestamp":"2025-06-15T12:17:15.803Z"}
+{"level":"info","message":"Environment: development","service":"plaid-microservice","timestamp":"2025-06-15T12:17:15.806Z"}
+{"level":"info","message":"Plaid environment: sandbox","service":"plaid-microservice","timestamp":"2025-06-15T12:17:15.806Z"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"plaid-microservice","timestamp":"2025-06-15T12:17:36.261Z","url":"/api-docs/","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"plaid-microservice","timestamp":"2025-06-15T12:17:36.343Z","url":"/api-docs/swagger-ui.css","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"plaid-microservice","timestamp":"2025-06-15T12:17:36.348Z","url":"/api-docs/swagger-ui-bundle.js","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"plaid-microservice","timestamp":"2025-06-15T12:17:36.361Z","url":"/api-docs/swagger-ui-standalone-preset.js","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"plaid-microservice","timestamp":"2025-06-15T12:17:36.370Z","url":"/api-docs/swagger-ui-init.js","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"plaid-microservice","timestamp":"2025-06-15T12:17:36.770Z","url":"/api-docs/favicon-32x32.png","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"plaid-microservice","timestamp":"2025-06-15T12:17:37.483Z","url":"/api-docs/favicon-32x32.png","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"}
