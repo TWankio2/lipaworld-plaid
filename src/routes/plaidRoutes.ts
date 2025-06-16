@@ -115,6 +115,7 @@ router.post('/item', authenticate, accessTokenValidation, plaidController.getIte
 router.post('/item/remove', authenticate, accessTokenValidation, plaidController.removeItem);
 router.post('/accounts/balance', authenticate, accessTokenValidation, plaidController.getAccountsBalance);
 router.post('/link-token/update', authenticate, exchangeTokenValidation, plaidController.createUpdateLinkToken);
+router.get('/validate-connection', plaidController.validateConnection);
 
 // Webhook endpoint (public, temporarily)
 router.post('/webhook', plaidController.handleWebhook);

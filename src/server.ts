@@ -16,8 +16,19 @@ import swaggerSpec from './config/swagger';
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Security middleware
-app.use(helmet());
+
+app.use(helmet({
+  contentSecurityPolicy: {
+    directives: {
+      defaultSrc: ["'self'"],
+      scriptSrc: ["'self'", "'unsafe-inline'", "https://cdn.plaid.com"],
+      styleSrc: ["'self'", "'unsafe-inline'"],
+      connectSrc: ["'self'", "https://sandbox.plaid.com", "https://development.plaid.com"],
+      frameSrc: ["https://cdn.plaid.com"]
+    }
+  }
+}));
+
 app.use(cors({
   origin: process.env.ALLOWED_ORIGINS?.split(',') || '*',
   credentials: true

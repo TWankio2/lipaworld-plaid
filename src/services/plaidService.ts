@@ -493,6 +493,36 @@ class PlaidService {
     }
   }
 
+  //check for successful connection
+
+  async validateSandboxConnection(): Promise<{isConnected: boolean, environment: string, error?: string}> {
+    try {
+      // Test connection with a simple API call
+      const response = await this.client.categoriesGet({});
+      
+      logger.info('Sandbox connection validated', {
+        environment: process.env.PLAID_ENV,
+        categories_count: response.data.categories.length
+      });
+  
+      return {
+        isConnected: true,
+        environment: process.env.PLAID_ENV || 'unknown'
+      };
+    } catch (error: any) {
+      logger.error('Sandbox connection failed', { 
+        error: error.message,
+        error_code: error.response?.data?.error_code 
+      });
+      
+      return {
+        isConnected: false,
+        environment: process.env.PLAID_ENV || 'unknown',
+        error: error.response?.data?.error_message || error.message
+      };
+    }
+  }
+
   private async handleTransactionWebhook(data: any) {
     logger.info('Processing transaction webhook', { 
       item_id: data.item_id,
@@ -650,15 +680,19 @@ class PlaidService {
     };
   }
 
-  // Health check method
-  async healthCheck(): Promise<{ status: string; plaid_environment: string }> {
+  // Health check method with sandbox validation
+  async healthCheck(): Promise<{ 
+    status: string; 
+    plaid_environment: string;
+    sandbox_connection: any;
+  }> {
     try {
-      // Test Plaid connection with a simple API call
-      const response = await this.client.categoriesGet({});
+      const sandboxCheck = await this.validateSandboxConnection();
       
       return {
-        status: 'healthy',
-        plaid_environment: process.env.PLAID_ENV || 'unknown'
+        status: sandboxCheck.isConnected ? 'healthy' : 'unhealthy',
+        plaid_environment: process.env.PLAID_ENV || 'unknown',
+        sandbox_connection: sandboxCheck
       };
     } catch (error: any) {
       logger.error('Health check failed', { error: error.message });

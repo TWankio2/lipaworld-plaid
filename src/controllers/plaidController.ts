@@ -126,6 +126,8 @@ async getTransactionsSync(req: AuthRequest, res: Response) {
       details: error.response?.data || error.message 
     });
   }
+
+
 }
 
 async getItem(req: AuthRequest, res: Response) {
@@ -184,7 +186,6 @@ async createUpdateLinkToken(req: AuthRequest, res: Response) {
   }
 }
 
-// Update the healthCheck to use the service's health check
 async healthCheck(req: Request, res: Response) {
   try {
     const result = await plaidService.healthCheck();
@@ -200,6 +201,23 @@ async healthCheck(req: Request, res: Response) {
       status: 'unhealthy',
       timestamp: new Date().toISOString(),
       error: error.message
+    });
+  }
+}
+
+async validateConnection(req: Request, res: Response) {
+  try {
+    const result = await plaidService.validateSandboxConnection();
+    res.json({
+      ...result,
+      timestamp: new Date().toISOString(),
+      client_id_prefix: process.env.PLAID_CLIENT_ID?.substring(0, 8) + '...'
+    });
+  } catch (error: any) {
+    logger.error('Connection validation failed', { error: error.message });
+    res.status(500).json({ 
+      error: 'Failed to validate connection',
+      details: error.message 
     });
   }
 }

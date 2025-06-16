@@ -28,7 +28,7 @@
         }
 
         .header {
-            background: linear-gradient(45deg, #667eea, #764ba2);
+            background: linear-gradient(45deg, #667eea, #140d1c);
             color: white;
             padding: 30px;
             text-align: center;
@@ -37,6 +37,29 @@
         .header h1 {
             font-size: 2.5rem;
             margin-bottom: 10px;
+        }
+
+        .status-indicator {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-top: 15px;
+            padding: 10px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 8px;
+        }
+
+        .status-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ef4444;
+            transition: all 0.3s;
+        }
+
+        .status-dot.connected {
+            background: #10b981;
         }
 
         .quick-test {
@@ -57,14 +80,29 @@
             margin: 5px;
         }
 
+        .btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
         .btn-primary {
             background: #667eea;
             color: white;
         }
 
-        .btn-primary:hover {
+        .btn-primary:hover:not(:disabled) {
             background: #5a67d8;
             transform: translateY(-2px);
+        }
+
+        .btn-success {
+            background: #10b981;
+            color: white;
+        }
+
+        .btn-warning {
+            background: #f59e0b;
+            color: white;
         }
 
         .test-area {
@@ -120,29 +158,75 @@
         .status-200 { background: #10b981; color: white; }
         .status-400 { background: #f59e0b; color: white; }
         .status-500 { background: #dc2626; color: white; }
+
+        .api-validation {
+            background: #f0f9ff;
+            border: 1px solid #0284c7;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .validation-result {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .validation-icon {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .validation-icon.success { background: #10b981; }
+        .validation-icon.error { background: #dc2626; }
+        .validation-icon.loading { background: #6b7280; animation: spin 1s linear infinite; }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
     </style>
+    <script src="https://cdn.plaid.com/link/v2/stable/link-initialize.js"></script>
 </head>
 <body>
     <div class="container">
         <div class="header">
             <h1>🏦 Plaid Microservice Test</h1>
             <p>Simple API Testing Interface</p>
+            <div class="status-indicator">
+                <span>Service Status:</span>
+                <div class="status-dot" id="statusDot"></div>
+                <span id="statusText">Checking...</span>
+            </div>
+        </div>
+
+        <div class="api-validation">
+            <h4>Env Validation</h4>
+            <button class="btn btn-primary" id="validateApiBtn">Validate Plaid Connection</button>
+            <div class="validation-result" id="validationResult" style="display: none;">
+                <div class="validation-icon" id="validationIcon">?</div>
+                <span id="validationText">Validating...</span>
+            </div>
         </div>
 
         <div class="quick-test">
             <h3>🚀 Quick Tests</h3>
-            <button class="btn btn-primary" onclick="testHealth()">Health Check</button>
-            <button class="btn btn-primary" onclick="testLinkToken()">Create Link Token</button>
+            <button class="btn btn-primary" id="healthBtn">Health Check</button>
+            <button class="btn btn-primary" id="linkTokenBtn">Create Link Token</button>
+            <button class="btn btn-primary" id="plaidLinkBtn" disabled>Open Plaid Link Popup</button>
         </div>
 
         <div class="test-area">
-            <div class="form-group">
-                <label>🔐 API Key:</label>
-                <input type="text" id="apiKey" class="form-control" 
-                       value="1aef789a9e16972b2c75729cbe6972eb129a09b62d4df900f207b8257ccbc702">
-            </div>
-
-            <div class="form-group">
+                        <div class="form-group">
                 <label>📝 Custom Request Body (JSON):</label>
                 <textarea id="requestBody" class="form-control">{
   "user_id": "user_12345",
@@ -165,17 +249,16 @@
                 </select>
             </div>
 
-            <button class="btn btn-primary" onclick="sendCustomRequest()">Send Custom Request</button>
-            <button class="btn" onclick="clearResponse()" style="background: #6b7280; color: white;">Clear Response</button>
+            <button class="btn btn-primary" id="customRequestBtn">Send Custom Request</button>
+            <button class="btn" id="clearBtn" style="background: #6b7280; color: white;">Clear Response</button>
 
             <div id="response-status"></div>
             <div id="response-content" class="response-box">
-🎯 Welcome to the Plaid Microservice Test Interface!
-
-Try these quick tests:
-1. Click "Health Check" to verify the service is running
-2. Click "Create Link Token" to test the core Plaid functionality
-3. Use the custom request form below for other endpoints
+Quick tests:
+1. Click "Validate API Key" to verify your Plaid credentials
+2. Click "Health Check" to verify the service is running
+3. Click "Create Link Token" to test the core Plaid functionality
+4. Use the custom request form below for other endpoints
 
 Response will appear here...
             </div>
@@ -184,6 +267,155 @@ Response will appear here...
 
     <script>
         const API_BASE = 'http://localhost:3000';
+        let currentLinkToken = null;
+        let isApiValidated = false;
+
+        // DOM elements
+        const statusDot = document.getElementById('statusDot');
+        const statusText = document.getElementById('statusText');
+        const validateApiBtn = document.getElementById('validateApiBtn');
+        const validationResult = document.getElementById('validationResult');
+        const validationIcon = document.getElementById('validationIcon');
+        const validationText = document.getElementById('validationText');
+        const healthBtn = document.getElementById('healthBtn');
+        const linkTokenBtn = document.getElementById('linkTokenBtn');
+        const plaidLinkBtn = document.getElementById('plaidLinkBtn');
+        const customRequestBtn = document.getElementById('customRequestBtn');
+        const clearBtn = document.getElementById('clearBtn');
+        const endpointSelect = document.getElementById('endpoint');
+        const requestBodyTextarea = document.getElementById('requestBody');
+
+        // Event listeners
+        validateApiBtn.addEventListener('click', validateApiKey);
+        healthBtn.addEventListener('click', testHealth);
+        linkTokenBtn.addEventListener('click', testLinkToken);
+        plaidLinkBtn.addEventListener('click', openPlaidLink);
+        customRequestBtn.addEventListener('click', sendCustomRequest);
+        clearBtn.addEventListener('click', clearResponse);
+        endpointSelect.addEventListener('change', updateRequestBody);
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            checkServiceHealth();
+        });
+
+        async function checkServiceHealth() {
+            try {
+                const response = await fetch(API_BASE + '/health');
+                const data = await response.json();
+                
+                if (response.ok) {
+                    statusDot.classList.add('connected');
+                    statusText.textContent = `Connected (${data.plaid_environment || 'unknown'})`;
+                } else {
+                    statusText.textContent = 'Service Error';
+                }
+            } catch (error) {
+                statusText.textContent = 'Service Offline';
+            }
+        }
+
+        async function validateApiKey() {
+    showValidationResult('loading', 'Validating connection...');
+
+    try {
+        const testBody = {
+            user_id: "test_validation_" + Date.now(),
+            client_name: "Connection Validation Test",
+            country_codes: ["US"],
+            language: "en",
+            products: ["transactions"]
+        };
+
+        const response = await fetch(API_BASE + '/link-token', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(testBody)
+        });
+
+        const data = await response.json();
+
+        if (response.ok && data.link_token) {
+            isApiValidated = true;
+            plaidLinkBtn.disabled = false;
+            showValidationResult('success', `✅ Connection valid! Connected to ${getPlaidEnvironment(data)} environment`);
+            
+            // Update status indicator
+            statusDot.classList.add('connected');
+            statusText.textContent = `Connection Validated (${getPlaidEnvironment(data)})`;
+        } else {
+            isApiValidated = false;
+            showValidationResult('error', `❌ Connection failed: ${data.error || data.details || 'Unknown error'}`);
+        }
+    } catch (error) {
+        isApiValidated = false;
+        showValidationResult('error', `❌ Connection failed: ${error.message}`);
+    }
+}
+            showValidationResult('loading', 'Validating API key...');
+
+            try {
+                // Test API key by trying to create a link token
+                const testBody = {
+                    user_id: "test_validation_" + Date.now(),
+                    client_name: "API Key Validation Test",
+                    country_codes: ["US"],
+                    language: "en",
+                    products: ["transactions"]
+                };
+
+                const response = await fetch(API_BASE + '/link-token', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(testBody)
+                });
+
+                const data = await response.json();
+
+                if (response.ok && data.link_token) {
+                    isApiValidated = true;
+                    plaidLinkBtn.disabled = false;
+                    showValidationResult('success', `✅ API key valid! Connected to ${getPlaidEnvironment(data)} environment`);
+                    
+                    // Update status indicator
+                    statusDot.classList.add('connected');
+                    statusText.textContent = `API Validated (${getPlaidEnvironment(data)})`;
+                } else {
+                    isApiValidated = false;
+                    showValidationResult('error', `❌ API key invalid: ${data.error || data.details || 'Unknown error'}`);
+                }
+            } catch (error) {
+                isApiValidated = false;
+                showValidationResult('error', `❌ Connection failed: ${error.message}`);
+            }
+        
+
+        function getPlaidEnvironment(data) {
+            // Try to determine environment from link token or other indicators
+            if (data.link_token && data.link_token.includes('sandbox')) {
+                return 'sandbox';
+            }
+            return process.env.PLAID_ENV || 'unknown';
+        }
+
+        function showValidationResult(type, message) {
+            validationResult.style.display = 'flex';
+            validationIcon.className = `validation-icon ${type}`;
+            
+            if (type === 'loading') {
+                validationIcon.textContent = '...';
+            } else if (type === 'success') {
+                validationIcon.textContent = '✓';
+            } else if (type === 'error') {
+                validationIcon.textContent = '✗';
+            }
+            
+            validationText.textContent = message;
+        }
 
         async function testHealth() {
             await makeRequest('GET', '/health');
@@ -191,23 +423,78 @@ Response will appear here...
 
         async function testLinkToken() {
             const body = {
-                "user_id": "test_user_123",
-                "client_name": "Test App",
-                "country_codes": ["US"],
-                "language": "en",
-                "products": ["transactions", "identity"]
+                user_id: "test_user_" + Date.now(),
+                client_name: "Test App",
+                country_codes: ["US"],
+                language: "en",
+                products: ["transactions", "identity"]
             };
-            await makeRequest('POST', '/link-token', body);
+            
+            const result = await makeRequest('POST', '/link-token', body);
+            
+            // Extract link_token from response for use with Plaid Link
+            try {
+                const responseContent = document.getElementById('response-content').textContent;
+                const response = JSON.parse(responseContent);
+                if (response.link_token) {
+                    currentLinkToken = response.link_token;
+                    plaidLinkBtn.disabled = false;
+                    console.log('Link token stored:', currentLinkToken);
+                }
+            } catch (e) {
+                console.error('Could not extract link token from response');
+            }
+        }
+
+        function openPlaidLink() {
+            if (!currentLinkToken) {
+                alert('Please create a link token first by clicking "Create Link Token"');
+                return;
+            }
+
+            const handler = Plaid.create({
+                token: currentLinkToken,
+                onSuccess: (public_token, metadata) => {
+                    console.log('✅ Plaid Link Success!');
+                    console.log('Public Token:', public_token);
+                    console.log('Metadata:', metadata);
+                    
+                    // Auto-populate exchange token request
+                    requestBodyTextarea.value = JSON.stringify({
+                        public_token: public_token,
+                        user_id: "test_user_123"
+                    }, null, 2);
+                    
+                    // Auto-select exchange token endpoint
+                    endpointSelect.value = "POST:/exchange-token";
+                    
+                    alert('✅ Bank connected successfully! You can now test token exchange.');
+                },
+                onLoad: () => {
+                    console.log('Plaid Link loaded');
+                },
+                onExit: (err, metadata) => {
+                    console.log('Plaid Link exited', err, metadata);
+                    if (err) {
+                        console.error('Link error:', err);
+                    }
+                },
+                onEvent: (eventName, metadata) => {
+                    console.log('Plaid Link event:', eventName, metadata);
+                }
+            });
+
+            handler.open();
         }
 
         async function sendCustomRequest() {
-            const endpoint = document.getElementById('endpoint').value;
+            const endpoint = endpointSelect.value;
             const [method, path] = endpoint.split(':');
             
             let body = null;
             if (method === 'POST') {
                 try {
-                    body = JSON.parse(document.getElementById('requestBody').value);
+                    body = JSON.parse(requestBodyTextarea.value);
                 } catch (e) {
                     showError('Invalid JSON in request body: ' + e.message);
                     return;
@@ -218,7 +505,7 @@ Response will appear here...
         }
 
         async function makeRequest(method, endpoint, body = null) {
-            const apiKey = document.getElementById('apiKey').value;
+           
             const responseStatus = document.getElementById('response-status');
             const responseContent = document.getElementById('response-content');
 
@@ -229,10 +516,6 @@ Response will appear here...
                 const headers = {
                     'Content-Type': 'application/json'
                 };
-
-                if (apiKey && endpoint !== '/health') {
-                    headers['X-API-Key'] = apiKey;
-                }
 
                 const requestOptions = {
                     method: method,
@@ -276,30 +559,28 @@ Common issues:
             document.getElementById('response-content').textContent = 'Response cleared. Send a request to see results here.';
         }
 
-        // Update request body based on selected endpoint
-        document.getElementById('endpoint').addEventListener('change', function() {
-            const endpoint = this.value;
-            const requestBody = document.getElementById('requestBody');
+        function updateRequestBody() {
+            const endpoint = endpointSelect.value;
             
             if (endpoint.includes('/link-token')) {
-                requestBody.value = JSON.stringify({
-                    "user_id": "user_12345",
-                    "client_name": "Test App",
-                    "country_codes": ["US"],
-                    "language": "en",
-                    "products": ["transactions", "identity"]
+                requestBodyTextarea.value = JSON.stringify({
+                    user_id: "user_12345",
+                    client_name: "Test App",
+                    country_codes: ["US"],
+                    language: "en",
+                    products: ["transactions", "identity"]
                 }, null, 2);
             } else if (endpoint.includes('/exchange-token')) {
-                requestBody.value = JSON.stringify({
-                    "public_token": "public-sandbox-abc123-def456",
-                    "user_id": "user_12345"
+                requestBodyTextarea.value = JSON.stringify({
+                    public_token: "public-sandbox-abc123-def456",
+                    user_id: "user_12345"
                 }, null, 2);
             } else if (endpoint.includes('/accounts') || endpoint.includes('/transactions') || endpoint.includes('/identity')) {
-                requestBody.value = JSON.stringify({
-                    "access_token": "access-sandbox-xyz789-abc123"
+                requestBodyTextarea.value = JSON.stringify({
+                    access_token: "access-sandbox-xyz789-abc123"
                 }, null, 2);
             }
-        });
+        }
     </script>
 </body>
 </html>
