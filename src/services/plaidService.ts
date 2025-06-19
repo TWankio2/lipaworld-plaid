@@ -67,27 +67,49 @@ class PlaidService {
 
   async exchangePublicToken(data: ExchangeTokenRequest) {
     try {
+      console.log('🔄 Calling Plaid API with:', {
+        public_token: data.public_token?.substring(0, 20) + '...',
+        user_id: data.user_id
+      });
+      
       const response = await this.client.itemPublicTokenExchange({
         public_token: data.public_token,
       });
-
+  
+      console.log('✅ Plaid API Success:', {
+        access_token: response.data.access_token?.substring(0, 20) + '...',
+        item_id: response.data.item_id,
+        request_id: response.data.request_id
+      });
+  
       logger.info('Public token exchanged successfully', { 
         user_id: data.user_id,
         item_id: response.data.item_id,
-        access_token_id: response.data.access_token.substring(0, 12) + '...' // Log partial token for debugging
+        access_token_id: response.data.access_token.substring(0, 12) + '...'
       });
-
+  
       return {
         access_token: response.data.access_token,
         item_id: response.data.item_id,
         request_id: response.data.request_id,
       };
     } catch (error: any) {
+      console.error('❌ Plaid API Error:', {
+        message: error.message,
+        response: error.response?.data,
+        status: error.response?.status,
+        config: {
+          url: error.config?.url,
+          method: error.config?.method
+        }
+      });
+      
       logger.error('Failed to exchange public token', { 
         error: error.message,
         error_code: error.response?.data?.error_code,
         error_type: error.response?.data?.error_type,
-        user_id: data.user_id 
+        user_id: data.user_id,
+        plaidErrorMessage: error.response?.data?.error_message
       });
       throw error;
     }

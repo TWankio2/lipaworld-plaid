@@ -13,3 +13,6 @@ dist
 .DS_Store
 logs
 *.log
+public/test.html
+plaid-test
+plaid-test/*

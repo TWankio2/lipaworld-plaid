@@ -7,3 +7,174 @@
 {"error":"Request failed with status code 400","error_code":"INVALID_PUBLIC_TOKEN","error_type":"INVALID_INPUT","level":"error","message":"Failed to exchange public token","service":"plaid-microservice","timestamp":"2025-06-16T07:24:15.452Z","user_id":"user_12345"}
 {"error":"Request failed with status code 400","level":"error","message":"Token exchange failed","service":"plaid-microservice","timestamp":"2025-06-16T07:24:15.453Z"}
 {"error":"Expected ',' or '}' after property value in JSON at position 71","level":"error","message":"Unhandled error","service":"plaid-microservice","stack":"SyntaxError: Expected ',' or '}' after property value in JSON at position 71\n    at JSON.parse (<anonymous>)\n    at parse (C:\\Users\\VICTUS\\Documents\\WebApps\\lipaworld-plaid\\node_modules\\body-parser\\lib\\types\\json.js:92:19)\n    at C:\\Users\\VICTUS\\Documents\\WebApps\\lipaworld-plaid\\node_modules\\body-parser\\lib\\read.js:128:18\n    at AsyncResource.runInAsyncScope (node:async_hooks:206:9)\n    at invokeCallback (C:\\Users\\VICTUS\\Documents\\WebApps\\lipaworld-plaid\\node_modules\\raw-body\\index.js:238:16)\n    at done (C:\\Users\\VICTUS\\Documents\\WebApps\\lipaworld-plaid\\node_modules\\raw-body\\index.js:227:7)\n    at IncomingMessage.onEnd (C:\\Users\\VICTUS\\Documents\\WebApps\\lipaworld-plaid\\node_modules\\raw-body\\index.js:287:7)\n    at IncomingMessage.emit (node:events:519:28)\n    at endReadableNT (node:internal/streams/readable:1696:12)\n    at processTicksAndRejections (node:internal/process/task_queues:82:21)","timestamp":"2025-06-16T07:49:05.615Z"}
+{"error":"Request failed with status code 400","error_code":"INVALID_PUBLIC_TOKEN","error_type":"INVALID_INPUT","level":"error","message":"Failed to exchange public token","service":"plaid-microservice","timestamp":"2025-06-16T09:11:35.363Z","user_id":"user_12345"}
+{"error":"Request failed with status code 400","level":"error","message":"Token exchange failed","service":"plaid-microservice","timestamp":"2025-06-16T09:11:35.365Z"}
+{"error":"Invalid public token","error_code":"INVALID_PUBLIC_TOKEN","error_type":"INVALID_INPUT","level":"error","message":"Failed to exchange public token","service":"plaid-microservice","timestamp":"2025-06-19T11:45:51.177Z","user_id":"test-user"}
+{"error":"Invalid credentials","error_code":"INVALID_CREDENTIALS","level":"error","message":"Sandbox connection failed","service":"plaid-microservice","timestamp":"2025-06-19T11:45:51.179Z"}
+{"error":"Connection failed","level":"error","message":"Sandbox connection failed","service":"plaid-microservice","timestamp":"2025-06-19T11:45:51.180Z"}
+{"error":"jwt malformed","headers":["plaid-verification"],"level":"error","message":"Webhook signature verification failed","service":"plaid-microservice","timestamp":"2025-06-19T11:45:51.183Z"}
+{"error":"Invalid webhook signature","item_id":"test-item","level":"error","message":"Failed to process webhook","service":"plaid-microservice","timestamp":"2025-06-19T11:45:51.184Z","webhook_code":"SYNC_UPDATES_AVAILABLE","webhook_type":"TRANSACTIONS"}
+{"error":"Invalid public token","error_code":"INVALID_PUBLIC_TOKEN","error_type":"INVALID_INPUT","level":"error","message":"Failed to exchange public token","service":"plaid-microservice","timestamp":"2025-06-19T11:46:16.502Z","user_id":"test-user"}
+{"error":"Invalid credentials","error_code":"INVALID_CREDENTIALS","level":"error","message":"Sandbox connection failed","service":"plaid-microservice","timestamp":"2025-06-19T11:46:16.505Z"}
+{"error":"Connection failed","level":"error","message":"Sandbox connection failed","service":"plaid-microservice","timestamp":"2025-06-19T11:46:16.506Z"}
+{"error":"jwt malformed","headers":["plaid-verification"],"level":"error","message":"Webhook signature verification failed","service":"plaid-microservice","timestamp":"2025-06-19T11:46:16.509Z"}
+{"error":"Invalid webhook signature","item_id":"test-item","level":"error","message":"Failed to process webhook","service":"plaid-microservice","timestamp":"2025-06-19T11:46:16.509Z","webhook_code":"SYNC_UPDATES_AVAILABLE","webhook_type":"TRANSACTIONS"}
+{"error":"Invalid public token","error_code":"INVALID_PUBLIC_TOKEN","error_type":"INVALID_INPUT","level":"error","message":"Failed to exchange public token","service":"plaid-microservice","timestamp":"2025-06-19T11:50:13.812Z","user_id":"test-user"}
+{"error":"Invalid credentials","error_code":"INVALID_CREDENTIALS","level":"error","message":"Sandbox connection failed","service":"plaid-microservice","timestamp":"2025-06-19T11:50:13.816Z"}
+{"error":"Connection failed","level":"error","message":"Sandbox connection failed","service":"plaid-microservice","timestamp":"2025-06-19T11:50:13.817Z"}
+{"error":"jwt malformed","headers":["plaid-verification"],"level":"error","message":"Webhook signature verification failed","service":"plaid-microservice","timestamp":"2025-06-19T11:50:13.821Z"}
+{"error":"Invalid webhook signature","item_id":"test-item","level":"error","message":"Failed to process webhook","service":"plaid-microservice","timestamp":"2025-06-19T11:50:13.821Z","webhook_code":"SYNC_UPDATES_AVAILABLE","webhook_type":"TRANSACTIONS"}
+{"error":"Account error","error_code":"INVALID_ACCESS_TOKEN","level":"error","message":"Failed to get accounts","service":"plaid-microservice","timestamp":"2025-06-19T11:50:13.825Z"}
+{"error":"Transaction error","level":"error","message":"Failed to get transactions","service":"plaid-microservice","timestamp":"2025-06-19T11:50:13.825Z"}
+{"error":"Connection failed","level":"error","message":"Sandbox connection failed","service":"plaid-microservice","timestamp":"2025-06-19T11:50:13.826Z"}
+{"error":"Invalid public token","error_code":"INVALID_PUBLIC_TOKEN","error_type":"INVALID_INPUT","level":"error","message":"Failed to exchange public token","service":"plaid-microservice","timestamp":"2025-06-19T11:50:43.502Z","user_id":"test-user"}
+{"error":"Invalid credentials","error_code":"INVALID_CREDENTIALS","level":"error","message":"Sandbox connection failed","service":"plaid-microservice","timestamp":"2025-06-19T11:50:43.506Z"}
+{"error":"Connection failed","level":"error","message":"Sandbox connection failed","service":"plaid-microservice","timestamp":"2025-06-19T11:50:43.506Z"}
+{"error":"jwt malformed","headers":["plaid-verification"],"level":"error","message":"Webhook signature verification failed","service":"plaid-microservice","timestamp":"2025-06-19T11:50:43.509Z"}
+{"error":"Invalid webhook signature","item_id":"test-item","level":"error","message":"Failed to process webhook","service":"plaid-microservice","timestamp":"2025-06-19T11:50:43.509Z","webhook_code":"SYNC_UPDATES_AVAILABLE","webhook_type":"TRANSACTIONS"}
+{"error":"Account error","error_code":"INVALID_ACCESS_TOKEN","level":"error","message":"Failed to get accounts","service":"plaid-microservice","timestamp":"2025-06-19T11:50:43.514Z"}
+{"error":"Transaction error","level":"error","message":"Failed to get transactions","service":"plaid-microservice","timestamp":"2025-06-19T11:50:43.514Z"}
+{"error":"Connection failed","level":"error","message":"Sandbox connection failed","service":"plaid-microservice","timestamp":"2025-06-19T11:50:43.515Z"}
+{"error":"Invalid public token","error_code":"INVALID_PUBLIC_TOKEN","error_type":"INVALID_INPUT","level":"error","message":"Failed to exchange public token","service":"plaid-microservice","timestamp":"2025-06-19T11:55:43.035Z","user_id":"test-user"}
+{"error":"Invalid credentials","error_code":"INVALID_CREDENTIALS","level":"error","message":"Sandbox connection failed","service":"plaid-microservice","timestamp":"2025-06-19T11:55:43.038Z"}
+{"error":"Connection failed","level":"error","message":"Sandbox connection failed","service":"plaid-microservice","timestamp":"2025-06-19T11:55:43.039Z"}
+{"error":"jwt malformed","headers":["plaid-verification"],"level":"error","message":"Webhook signature verification failed","service":"plaid-microservice","timestamp":"2025-06-19T11:55:43.043Z"}
+{"error":"Invalid webhook signature","item_id":"test-item","level":"error","message":"Failed to process webhook","service":"plaid-microservice","timestamp":"2025-06-19T11:55:43.043Z","webhook_code":"SYNC_UPDATES_AVAILABLE","webhook_type":"TRANSACTIONS"}
+{"error":"Account error","error_code":"INVALID_ACCESS_TOKEN","level":"error","message":"Failed to get accounts","service":"plaid-microservice","timestamp":"2025-06-19T11:55:43.047Z"}
+{"error":"Transaction error","level":"error","message":"Failed to get transactions","service":"plaid-microservice","timestamp":"2025-06-19T11:55:43.047Z"}
+{"error":"Connection failed","level":"error","message":"Sandbox connection failed","service":"plaid-microservice","timestamp":"2025-06-19T11:55:43.048Z"}
+{"error":"Invalid public token","error_code":"INVALID_PUBLIC_TOKEN","error_type":"INVALID_INPUT","level":"error","message":"Failed to exchange public token","service":"plaid-microservice","timestamp":"2025-06-19T11:56:55.552Z","user_id":"test-user"}
+{"error":"Invalid credentials","error_code":"INVALID_CREDENTIALS","level":"error","message":"Sandbox connection failed","service":"plaid-microservice","timestamp":"2025-06-19T11:56:55.555Z"}
+{"error":"Connection failed","level":"error","message":"Sandbox connection failed","service":"plaid-microservice","timestamp":"2025-06-19T11:56:55.556Z"}
+{"error":"jwt malformed","headers":["plaid-verification"],"level":"error","message":"Webhook signature verification failed","service":"plaid-microservice","timestamp":"2025-06-19T11:56:55.559Z"}
+{"error":"Invalid webhook signature","item_id":"test-item","level":"error","message":"Failed to process webhook","service":"plaid-microservice","timestamp":"2025-06-19T11:56:55.559Z","webhook_code":"SYNC_UPDATES_AVAILABLE","webhook_type":"TRANSACTIONS"}
+{"error":"Account error","error_code":"INVALID_ACCESS_TOKEN","level":"error","message":"Failed to get accounts","service":"plaid-microservice","timestamp":"2025-06-19T11:56:55.562Z"}
+{"error":"Transaction error","level":"error","message":"Failed to get transactions","service":"plaid-microservice","timestamp":"2025-06-19T11:56:55.563Z"}
+{"error":"Connection failed","level":"error","message":"Sandbox connection failed","service":"plaid-microservice","timestamp":"2025-06-19T11:56:55.563Z"}
+{"error":"Identity error","level":"error","message":"Failed to get identity","service":"plaid-microservice","timestamp":"2025-06-19T11:56:55.571Z"}
+{"error":"Income error","level":"error","message":"Failed to get income","service":"plaid-microservice","timestamp":"2025-06-19T11:56:55.571Z"}
+{"error":"Sync error","level":"error","message":"Failed to sync transactions","service":"plaid-microservice","timestamp":"2025-06-19T11:56:55.572Z"}
+{"error":"Item error","level":"error","message":"Failed to get item","service":"plaid-microservice","timestamp":"2025-06-19T11:56:55.572Z"}
+{"error":"Remove error","level":"error","message":"Failed to remove item","service":"plaid-microservice","timestamp":"2025-06-19T11:56:55.572Z"}
+{"error":"Balance error","level":"error","message":"Failed to get account balances","service":"plaid-microservice","timestamp":"2025-06-19T11:56:55.573Z"}
+{"error":"Update token error","error_code":"INVALID_ACCESS_TOKEN","level":"error","message":"Failed to create update link token","service":"plaid-microservice","timestamp":"2025-06-19T11:56:55.573Z","user_id":"test-user"}
+{"error":"Invalid public token","error_code":"INVALID_PUBLIC_TOKEN","error_type":"INVALID_INPUT","level":"error","message":"Failed to exchange public token","service":"plaid-microservice","timestamp":"2025-06-19T11:57:13.702Z","user_id":"test-user"}
+{"error":"Invalid credentials","error_code":"INVALID_CREDENTIALS","level":"error","message":"Sandbox connection failed","service":"plaid-microservice","timestamp":"2025-06-19T11:57:13.706Z"}
+{"error":"Connection failed","level":"error","message":"Sandbox connection failed","service":"plaid-microservice","timestamp":"2025-06-19T11:57:13.707Z"}
+{"error":"jwt malformed","headers":["plaid-verification"],"level":"error","message":"Webhook signature verification failed","service":"plaid-microservice","timestamp":"2025-06-19T11:57:13.712Z"}
+{"error":"Invalid webhook signature","item_id":"test-item","level":"error","message":"Failed to process webhook","service":"plaid-microservice","timestamp":"2025-06-19T11:57:13.712Z","webhook_code":"SYNC_UPDATES_AVAILABLE","webhook_type":"TRANSACTIONS"}
+{"error":"Account error","error_code":"INVALID_ACCESS_TOKEN","level":"error","message":"Failed to get accounts","service":"plaid-microservice","timestamp":"2025-06-19T11:57:13.717Z"}
+{"error":"Transaction error","level":"error","message":"Failed to get transactions","service":"plaid-microservice","timestamp":"2025-06-19T11:57:13.719Z"}
+{"error":"Connection failed","level":"error","message":"Sandbox connection failed","service":"plaid-microservice","timestamp":"2025-06-19T11:57:13.720Z"}
+{"error":"Identity error","level":"error","message":"Failed to get identity","service":"plaid-microservice","timestamp":"2025-06-19T11:57:13.729Z"}
+{"error":"Income error","level":"error","message":"Failed to get income","service":"plaid-microservice","timestamp":"2025-06-19T11:57:13.729Z"}
+{"error":"Sync error","level":"error","message":"Failed to sync transactions","service":"plaid-microservice","timestamp":"2025-06-19T11:57:13.730Z"}
+{"error":"Item error","level":"error","message":"Failed to get item","service":"plaid-microservice","timestamp":"2025-06-19T11:57:13.730Z"}
+{"error":"Remove error","level":"error","message":"Failed to remove item","service":"plaid-microservice","timestamp":"2025-06-19T11:57:13.730Z"}
+{"error":"Balance error","level":"error","message":"Failed to get account balances","service":"plaid-microservice","timestamp":"2025-06-19T11:57:13.731Z"}
+{"error":"Update token error","error_code":"INVALID_ACCESS_TOKEN","level":"error","message":"Failed to create update link token","service":"plaid-microservice","timestamp":"2025-06-19T11:57:13.731Z","user_id":"test-user"}
+{"error":"Invalid public token","error_code":"INVALID_PUBLIC_TOKEN","error_type":"INVALID_INPUT","level":"error","message":"Failed to exchange public token","service":"plaid-microservice","timestamp":"2025-06-19T12:00:33.479Z","user_id":"test-user"}
+{"error":"Invalid credentials","error_code":"INVALID_CREDENTIALS","level":"error","message":"Sandbox connection failed","service":"plaid-microservice","timestamp":"2025-06-19T12:00:33.482Z"}
+{"error":"Connection failed","level":"error","message":"Sandbox connection failed","service":"plaid-microservice","timestamp":"2025-06-19T12:00:33.483Z"}
+{"error":"jwt malformed","headers":["plaid-verification"],"level":"error","message":"Webhook signature verification failed","service":"plaid-microservice","timestamp":"2025-06-19T12:00:33.486Z"}
+{"error":"Invalid webhook signature","item_id":"test-item","level":"error","message":"Failed to process webhook","service":"plaid-microservice","timestamp":"2025-06-19T12:00:33.486Z","webhook_code":"SYNC_UPDATES_AVAILABLE","webhook_type":"TRANSACTIONS"}
+{"error":"Account error","error_code":"INVALID_ACCESS_TOKEN","level":"error","message":"Failed to get accounts","service":"plaid-microservice","timestamp":"2025-06-19T12:00:33.489Z"}
+{"error":"Transaction error","level":"error","message":"Failed to get transactions","service":"plaid-microservice","timestamp":"2025-06-19T12:00:33.490Z"}
+{"error":"Identity error","level":"error","message":"Failed to get identity","service":"plaid-microservice","timestamp":"2025-06-19T12:00:33.490Z"}
+{"error":"Income error","level":"error","message":"Failed to get income","service":"plaid-microservice","timestamp":"2025-06-19T12:00:33.490Z"}
+{"error":"Sync error","level":"error","message":"Failed to sync transactions","service":"plaid-microservice","timestamp":"2025-06-19T12:00:33.491Z"}
+{"error":"Item error","level":"error","message":"Failed to get item","service":"plaid-microservice","timestamp":"2025-06-19T12:00:33.491Z"}
+{"error":"Remove error","level":"error","message":"Failed to remove item","service":"plaid-microservice","timestamp":"2025-06-19T12:00:33.491Z"}
+{"error":"Balance error","level":"error","message":"Failed to get account balances","service":"plaid-microservice","timestamp":"2025-06-19T12:00:33.491Z"}
+{"error":"Update token error","error_code":"INVALID_ACCESS_TOKEN","level":"error","message":"Failed to create update link token","service":"plaid-microservice","timestamp":"2025-06-19T12:00:33.492Z","user_id":"test-user"}
+{"error":"Invalid public token","error_code":"INVALID_PUBLIC_TOKEN","error_type":"INVALID_INPUT","level":"error","message":"Failed to exchange public token","service":"plaid-microservice","timestamp":"2025-06-19T12:00:34.644Z","user_id":"test-user"}
+{"error":"Invalid credentials","error_code":"INVALID_CREDENTIALS","level":"error","message":"Sandbox connection failed","service":"plaid-microservice","timestamp":"2025-06-19T12:00:34.650Z"}
+{"error":"Connection failed","level":"error","message":"Sandbox connection failed","service":"plaid-microservice","timestamp":"2025-06-19T12:00:34.651Z"}
+{"error":"jwt malformed","headers":["plaid-verification"],"level":"error","message":"Webhook signature verification failed","service":"plaid-microservice","timestamp":"2025-06-19T12:00:34.655Z"}
+{"error":"Invalid webhook signature","item_id":"test-item","level":"error","message":"Failed to process webhook","service":"plaid-microservice","timestamp":"2025-06-19T12:00:34.655Z","webhook_code":"SYNC_UPDATES_AVAILABLE","webhook_type":"TRANSACTIONS"}
+{"error":"Account error","error_code":"INVALID_ACCESS_TOKEN","level":"error","message":"Failed to get accounts","service":"plaid-microservice","timestamp":"2025-06-19T12:00:34.658Z"}
+{"error":"Transaction error","level":"error","message":"Failed to get transactions","service":"plaid-microservice","timestamp":"2025-06-19T12:00:34.659Z"}
+{"error":"Connection failed","level":"error","message":"Sandbox connection failed","service":"plaid-microservice","timestamp":"2025-06-19T12:00:34.659Z"}
+{"error":"Identity error","level":"error","message":"Failed to get identity","service":"plaid-microservice","timestamp":"2025-06-19T12:00:34.660Z"}
+{"error":"Income error","level":"error","message":"Failed to get income","service":"plaid-microservice","timestamp":"2025-06-19T12:00:34.660Z"}
+{"error":"Sync error","level":"error","message":"Failed to sync transactions","service":"plaid-microservice","timestamp":"2025-06-19T12:00:34.660Z"}
+{"error":"Item error","level":"error","message":"Failed to get item","service":"plaid-microservice","timestamp":"2025-06-19T12:00:34.661Z"}
+{"error":"Remove error","level":"error","message":"Failed to remove item","service":"plaid-microservice","timestamp":"2025-06-19T12:00:34.661Z"}
+{"error":"Balance error","level":"error","message":"Failed to get account balances","service":"plaid-microservice","timestamp":"2025-06-19T12:00:34.661Z"}
+{"error":"Update token error","error_code":"INVALID_ACCESS_TOKEN","level":"error","message":"Failed to create update link token","service":"plaid-microservice","timestamp":"2025-06-19T12:00:34.661Z","user_id":"test-user"}
+{"error":"Invalid public token","error_code":"INVALID_PUBLIC_TOKEN","error_type":"INVALID_INPUT","level":"error","message":"Failed to exchange public token","service":"plaid-microservice","timestamp":"2025-06-19T12:00:37.134Z","user_id":"test-user"}
+{"error":"Invalid credentials","error_code":"INVALID_CREDENTIALS","level":"error","message":"Sandbox connection failed","service":"plaid-microservice","timestamp":"2025-06-19T12:00:37.136Z"}
+{"error":"Connection failed","level":"error","message":"Sandbox connection failed","service":"plaid-microservice","timestamp":"2025-06-19T12:00:37.138Z"}
+{"error":"jwt malformed","headers":["plaid-verification"],"level":"error","message":"Webhook signature verification failed","service":"plaid-microservice","timestamp":"2025-06-19T12:00:37.141Z"}
+{"error":"Invalid webhook signature","item_id":"test-item","level":"error","message":"Failed to process webhook","service":"plaid-microservice","timestamp":"2025-06-19T12:00:37.141Z","webhook_code":"SYNC_UPDATES_AVAILABLE","webhook_type":"TRANSACTIONS"}
+{"error":"Account error","error_code":"INVALID_ACCESS_TOKEN","level":"error","message":"Failed to get accounts","service":"plaid-microservice","timestamp":"2025-06-19T12:00:37.145Z"}
+{"error":"Transaction error","level":"error","message":"Failed to get transactions","service":"plaid-microservice","timestamp":"2025-06-19T12:00:37.145Z"}
+{"error":"Connection failed","level":"error","message":"Sandbox connection failed","service":"plaid-microservice","timestamp":"2025-06-19T12:00:37.145Z"}
+{"error":"Identity error","level":"error","message":"Failed to get identity","service":"plaid-microservice","timestamp":"2025-06-19T12:00:37.146Z"}
+{"error":"Income error","level":"error","message":"Failed to get income","service":"plaid-microservice","timestamp":"2025-06-19T12:00:37.146Z"}
+{"error":"Sync error","level":"error","message":"Failed to sync transactions","service":"plaid-microservice","timestamp":"2025-06-19T12:00:37.146Z"}
+{"error":"Item error","level":"error","message":"Failed to get item","service":"plaid-microservice","timestamp":"2025-06-19T12:00:37.147Z"}
+{"error":"Remove error","level":"error","message":"Failed to remove item","service":"plaid-microservice","timestamp":"2025-06-19T12:00:37.147Z"}
+{"error":"Balance error","level":"error","message":"Failed to get account balances","service":"plaid-microservice","timestamp":"2025-06-19T12:00:37.147Z"}
+{"error":"Update token error","error_code":"INVALID_ACCESS_TOKEN","level":"error","message":"Failed to create update link token","service":"plaid-microservice","timestamp":"2025-06-19T12:00:37.147Z","user_id":"test-user"}
+{"error":"Invalid public token","error_code":"INVALID_PUBLIC_TOKEN","error_type":"INVALID_INPUT","level":"error","message":"Failed to exchange public token","service":"plaid-microservice","timestamp":"2025-06-19T12:00:51.901Z","user_id":"test-user"}
+{"error":"Invalid credentials","error_code":"INVALID_CREDENTIALS","level":"error","message":"Sandbox connection failed","service":"plaid-microservice","timestamp":"2025-06-19T12:00:51.906Z"}
+{"error":"Connection failed","level":"error","message":"Sandbox connection failed","service":"plaid-microservice","timestamp":"2025-06-19T12:00:51.909Z"}
+{"error":"jwt malformed","headers":["plaid-verification"],"level":"error","message":"Webhook signature verification failed","service":"plaid-microservice","timestamp":"2025-06-19T12:00:51.916Z"}
+{"error":"Invalid webhook signature","item_id":"test-item","level":"error","message":"Failed to process webhook","service":"plaid-microservice","timestamp":"2025-06-19T12:00:51.916Z","webhook_code":"SYNC_UPDATES_AVAILABLE","webhook_type":"TRANSACTIONS"}
+{"error":"Account error","error_code":"INVALID_ACCESS_TOKEN","level":"error","message":"Failed to get accounts","service":"plaid-microservice","timestamp":"2025-06-19T12:00:51.929Z"}
+{"error":"Transaction error","level":"error","message":"Failed to get transactions","service":"plaid-microservice","timestamp":"2025-06-19T12:00:51.931Z"}
+{"error":"Identity error","level":"error","message":"Failed to get identity","service":"plaid-microservice","timestamp":"2025-06-19T12:00:51.942Z"}
+{"error":"Income error","level":"error","message":"Failed to get income","service":"plaid-microservice","timestamp":"2025-06-19T12:00:51.943Z"}
+{"error":"Sync error","level":"error","message":"Failed to sync transactions","service":"plaid-microservice","timestamp":"2025-06-19T12:00:51.944Z"}
+{"error":"Item error","level":"error","message":"Failed to get item","service":"plaid-microservice","timestamp":"2025-06-19T12:00:51.945Z"}
+{"error":"Remove error","level":"error","message":"Failed to remove item","service":"plaid-microservice","timestamp":"2025-06-19T12:00:51.946Z"}
+{"error":"Balance error","level":"error","message":"Failed to get account balances","service":"plaid-microservice","timestamp":"2025-06-19T12:00:51.946Z"}
+{"error":"Update token error","error_code":"INVALID_ACCESS_TOKEN","level":"error","message":"Failed to create update link token","service":"plaid-microservice","timestamp":"2025-06-19T12:00:51.951Z","user_id":"test-user"}
+{"error":"Invalid public token","error_code":"INVALID_PUBLIC_TOKEN","error_type":"INVALID_INPUT","level":"error","message":"Failed to exchange public token","service":"plaid-microservice","timestamp":"2025-06-19T12:00:54.119Z","user_id":"test-user"}
+{"error":"Invalid credentials","error_code":"INVALID_CREDENTIALS","level":"error","message":"Sandbox connection failed","service":"plaid-microservice","timestamp":"2025-06-19T12:00:54.123Z"}
+{"error":"Connection failed","level":"error","message":"Sandbox connection failed","service":"plaid-microservice","timestamp":"2025-06-19T12:00:54.124Z"}
+{"error":"jwt malformed","headers":["plaid-verification"],"level":"error","message":"Webhook signature verification failed","service":"plaid-microservice","timestamp":"2025-06-19T12:00:54.127Z"}
+{"error":"Invalid webhook signature","item_id":"test-item","level":"error","message":"Failed to process webhook","service":"plaid-microservice","timestamp":"2025-06-19T12:00:54.128Z","webhook_code":"SYNC_UPDATES_AVAILABLE","webhook_type":"TRANSACTIONS"}
+{"error":"Account error","error_code":"INVALID_ACCESS_TOKEN","level":"error","message":"Failed to get accounts","service":"plaid-microservice","timestamp":"2025-06-19T12:00:54.131Z"}
+{"error":"Transaction error","level":"error","message":"Failed to get transactions","service":"plaid-microservice","timestamp":"2025-06-19T12:00:54.132Z"}
+{"error":"Connection failed","level":"error","message":"Sandbox connection failed","service":"plaid-microservice","timestamp":"2025-06-19T12:00:54.133Z"}
+{"error":"Identity error","level":"error","message":"Failed to get identity","service":"plaid-microservice","timestamp":"2025-06-19T12:00:54.133Z"}
+{"error":"Income error","level":"error","message":"Failed to get income","service":"plaid-microservice","timestamp":"2025-06-19T12:00:54.135Z"}
+{"error":"Sync error","level":"error","message":"Failed to sync transactions","service":"plaid-microservice","timestamp":"2025-06-19T12:00:54.135Z"}
+{"error":"Item error","level":"error","message":"Failed to get item","service":"plaid-microservice","timestamp":"2025-06-19T12:00:54.136Z"}
+{"error":"Remove error","level":"error","message":"Failed to remove item","service":"plaid-microservice","timestamp":"2025-06-19T12:00:54.136Z"}
+{"error":"Balance error","level":"error","message":"Failed to get account balances","service":"plaid-microservice","timestamp":"2025-06-19T12:00:54.137Z"}
+{"error":"Update token error","error_code":"INVALID_ACCESS_TOKEN","level":"error","message":"Failed to create update link token","service":"plaid-microservice","timestamp":"2025-06-19T12:00:54.137Z","user_id":"test-user"}
+{"error":"Invalid public token","error_code":"INVALID_PUBLIC_TOKEN","error_type":"INVALID_INPUT","level":"error","message":"Failed to exchange public token","service":"plaid-microservice","timestamp":"2025-06-19T12:01:09.481Z","user_id":"test-user"}
+{"error":"Invalid credentials","error_code":"INVALID_CREDENTIALS","level":"error","message":"Sandbox connection failed","service":"plaid-microservice","timestamp":"2025-06-19T12:01:09.485Z"}
+{"error":"Connection failed","level":"error","message":"Sandbox connection failed","service":"plaid-microservice","timestamp":"2025-06-19T12:01:09.486Z"}
+{"error":"jwt malformed","headers":["plaid-verification"],"level":"error","message":"Webhook signature verification failed","service":"plaid-microservice","timestamp":"2025-06-19T12:01:09.491Z"}
+{"error":"Invalid webhook signature","item_id":"test-item","level":"error","message":"Failed to process webhook","service":"plaid-microservice","timestamp":"2025-06-19T12:01:09.491Z","webhook_code":"SYNC_UPDATES_AVAILABLE","webhook_type":"TRANSACTIONS"}
+{"error":"Account error","error_code":"INVALID_ACCESS_TOKEN","level":"error","message":"Failed to get accounts","service":"plaid-microservice","timestamp":"2025-06-19T12:01:09.496Z"}
+{"error":"Transaction error","level":"error","message":"Failed to get transactions","service":"plaid-microservice","timestamp":"2025-06-19T12:01:09.496Z"}
+{"error":"Connection failed","level":"error","message":"Sandbox connection failed","service":"plaid-microservice","timestamp":"2025-06-19T12:01:09.497Z"}
+{"error":"Identity error","level":"error","message":"Failed to get identity","service":"plaid-microservice","timestamp":"2025-06-19T12:01:09.497Z"}
+{"error":"Income error","level":"error","message":"Failed to get income","service":"plaid-microservice","timestamp":"2025-06-19T12:01:09.498Z"}
+{"error":"Sync error","level":"error","message":"Failed to sync transactions","service":"plaid-microservice","timestamp":"2025-06-19T12:01:09.498Z"}
+{"error":"Item error","level":"error","message":"Failed to get item","service":"plaid-microservice","timestamp":"2025-06-19T12:01:09.498Z"}
+{"error":"Remove error","level":"error","message":"Failed to remove item","service":"plaid-microservice","timestamp":"2025-06-19T12:01:09.499Z"}
+{"error":"Balance error","level":"error","message":"Failed to get account balances","service":"plaid-microservice","timestamp":"2025-06-19T12:01:09.500Z"}
+{"error":"Update token error","error_code":"INVALID_ACCESS_TOKEN","level":"error","message":"Failed to create update link token","service":"plaid-microservice","timestamp":"2025-06-19T12:01:09.501Z","user_id":"test-user"}
+{"error":"Invalid public token","error_code":"INVALID_PUBLIC_TOKEN","error_type":"INVALID_INPUT","level":"error","message":"Failed to exchange public token","service":"plaid-microservice","timestamp":"2025-06-19T12:03:28.449Z","user_id":"test-user"}
+{"error":"Invalid credentials","error_code":"INVALID_CREDENTIALS","level":"error","message":"Sandbox connection failed","service":"plaid-microservice","timestamp":"2025-06-19T12:03:28.452Z"}
+{"error":"Connection failed","level":"error","message":"Sandbox connection failed","service":"plaid-microservice","timestamp":"2025-06-19T12:03:28.453Z"}
+{"error":"jwt malformed","headers":["plaid-verification"],"level":"error","message":"Webhook signature verification failed","service":"plaid-microservice","timestamp":"2025-06-19T12:03:28.457Z"}
+{"error":"Invalid webhook signature","item_id":"test-item","level":"error","message":"Failed to process webhook","service":"plaid-microservice","timestamp":"2025-06-19T12:03:28.457Z","webhook_code":"SYNC_UPDATES_AVAILABLE","webhook_type":"TRANSACTIONS"}
+{"error":"Account error","error_code":"INVALID_ACCESS_TOKEN","level":"error","message":"Failed to get accounts","service":"plaid-microservice","timestamp":"2025-06-19T12:03:28.463Z"}
+{"error":"Transaction error","level":"error","message":"Failed to get transactions","service":"plaid-microservice","timestamp":"2025-06-19T12:03:28.464Z"}
+{"error":"Connection failed","level":"error","message":"Sandbox connection failed","service":"plaid-microservice","timestamp":"2025-06-19T12:03:28.464Z"}
+{"error":"Identity error","level":"error","message":"Failed to get identity","service":"plaid-microservice","timestamp":"2025-06-19T12:03:28.465Z"}
+{"error":"Income error","level":"error","message":"Failed to get income","service":"plaid-microservice","timestamp":"2025-06-19T12:03:28.465Z"}
+{"error":"Sync error","level":"error","message":"Failed to sync transactions","service":"plaid-microservice","timestamp":"2025-06-19T12:03:28.466Z"}
+{"error":"Item error","level":"error","message":"Failed to get item","service":"plaid-microservice","timestamp":"2025-06-19T12:03:28.466Z"}
+{"error":"Remove error","level":"error","message":"Failed to remove item","service":"plaid-microservice","timestamp":"2025-06-19T12:03:28.466Z"}
+{"error":"Balance error","level":"error","message":"Failed to get account balances","service":"plaid-microservice","timestamp":"2025-06-19T12:03:28.467Z"}
+{"error":"Update token error","error_code":"INVALID_ACCESS_TOKEN","level":"error","message":"Failed to create update link token","service":"plaid-microservice","timestamp":"2025-06-19T12:03:28.467Z","user_id":"test-user"}
+{"error":"Request failed with status code 400","error_code":"INVALID_PUBLIC_TOKEN","error_type":"INVALID_INPUT","level":"error","message":"Failed to exchange public token","service":"plaid-microservice","timestamp":"2025-06-19T13:07:06.776Z","user_id":"user_12345"}
+{"error":"Request failed with status code 400","level":"error","message":"Token exchange failed","service":"plaid-microservice","timestamp":"2025-06-19T13:07:06.777Z"}

@@ -48,7 +48,11 @@ const { open } = usePlaidLink({
   }
 });
 ```
-
+### Testing with Plaid Sandbox
+Test Bank: First Platypus Bank
+Username: user_good
+Password: pass_good
+The sandbox returns 12 test accounts with realistic banking data for development.
 ---
 
 ### Step 2: Exchange Tokens

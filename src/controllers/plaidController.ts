@@ -27,13 +27,36 @@ class PlaidController {
 
   async exchangeToken(req: AuthRequest, res: Response) {
     try {
-        const result = await plaidService.exchangePublicToken(req.body as unknown as ExchangeTokenRequest);
+      console.log('🔄 Exchange Token Request Body:', JSON.stringify(req.body, null, 2));
+      console.log('🔄 Request Headers:', JSON.stringify(req.headers, null, 2));
+      
+      const result = await plaidService.exchangePublicToken(req.body as unknown as ExchangeTokenRequest);
+      
+      console.log('✅ Exchange Success Result:', JSON.stringify(result, null, 2));
       res.json(result);
     } catch (error: any) {
-      logger.error('Token exchange failed', { error: error.message });
+      console.error('❌ Exchange Error Details:', {
+        message: error.message,
+        response: error.response?.data,
+        status: error.response?.status,
+        stack: error.stack
+      });
+      
+      logger.error('Token exchange failed', { 
+        error: error.message,
+        errorCode: error.response?.data?.error_code,
+        errorType: error.response?.data?.error_type,
+        requestBody: req.body
+      });
+      
       res.status(500).json({ 
         error: 'Failed to exchange token',
-        details: error.response?.data || error.message 
+        details: error.response?.data || error.message,
+        plaidError: {
+          code: error.response?.data?.error_code,
+          type: error.response?.data?.error_type,
+          message: error.response?.data?.error_message
+        }
       });
     }
   }
